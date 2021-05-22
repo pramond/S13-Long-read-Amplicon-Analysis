@@ -154,9 +154,9 @@ To further test the theory, we'll generate sequence fragments from the original 
 </summary>
 <pre><code>mkdir Length_gradients
 mkdir Length_gradients/18S
-mkdir Length_gradients/16S
-<p>&nbsp;</p>
-cp 18S_og_reads_trimm.fastq Length_gradients/18S/18S_trim_original.fastq
+mkdir Length_gradients/16S</code></pre>
+</summary>
+<pre><code>cp 18S_og_reads_trimm.fastq Length_gradients/18S/18S_trim_original.fastq
 cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</code></pre>
 </details>
 
