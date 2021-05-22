@@ -110,6 +110,7 @@ cp 16S_sub_V4_806R.fasta sub_regions
 cp 16S_sub_V4_926R.fasta sub_regions
 cp 18S_og_reads_trimm.fastq sub_regions
 cp 18S_sub_V4_STOECK.fasta sub_regions</code></pre>
+
 </details>
 
 <p>&nbsp;</p>
