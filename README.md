@@ -102,7 +102,7 @@ First, make a directory for the sub-region fragments and copy all the trimmed se
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
-<pre><code>mkdir sub_regions</code></pre>
+<pre><code>mkdir sub_regions
 
 <pre><code>cp 16S_og_reads_806R_trimm.fastq sub_regions
 cp 16S_og_reads_926R_trimm.fastq sub_regions
@@ -154,8 +154,7 @@ To further test the theory, we'll generate sequence fragments from the original 
 </summary>
 <pre><code>mkdir Length_gradients
 mkdir Length_gradients/18S
-mkdir Length_gradients/16S</code></pre>
-</summary>
+mkdir Length_gradients/16S
 <pre><code>cp 18S_og_reads_trimm.fastq Length_gradients/18S/18S_trim_original.fastq
 cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</code></pre>
 </details>
