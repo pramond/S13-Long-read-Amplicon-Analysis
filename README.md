@@ -162,7 +162,6 @@ cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</c
 
 Then use **cutadapt** to trim the fragment to different lengths:
 
-
 ```
 # 16S
 cutadapt -l 100 -o 16S_trim_100bp.fastq 16S_trim_original.fastq
