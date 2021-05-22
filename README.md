@@ -1,4 +1,3 @@
-## Bioinformatics Workshop 2021
 ### S13 Long-read Genomics, Metagenomics and Amplicon Analysis
 ### Tutorial/Practical
 
