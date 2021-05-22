@@ -70,7 +70,7 @@ Now, let's make a list of the reads that matched the adapter(primer) sequences f
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
-
+<p>&nbsp;</p>
 
 ```
 grep ">" longread_wk2/18S_sub_V4_STOECK.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/18S_reads_ID.txt
