@@ -152,6 +152,7 @@ To further test the theory, we'll generate sequence fragments from the original 
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
+
 <pre><code>mkdir Length_gradients
 mkdir Length_gradients/18S
 mkdir Length_gradients/16S
