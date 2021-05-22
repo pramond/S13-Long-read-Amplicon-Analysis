@@ -1,4 +1,4 @@
-### Tutorial/Practical
+## Tutorial/Practical
 
 ##### *Pierre Ramond, Swan LS Sow*
 ##### *Thursday, 27th May 2021*
@@ -100,10 +100,7 @@ First, make a directory for the sub-region fragments and copy all the trimmed se
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
-
-
-```
-mkdir sub_regions
+<pre><code>mkdir sub_regions
 
 cp 16S_og_reads_806R_trimm.fastq sub_regions
 cp 16S_og_reads_926R_trimm.fastq sub_regions
@@ -111,7 +108,7 @@ cp 16S_sub_V4_806R.fasta sub_regions
 cp 16S_sub_V4_926R.fasta sub_regions
 cp 18S_og_reads_trimm.fastq sub_regions
 cp 18S_sub_V4_STOECK.fasta sub_regions
-```
+</pre></code>
 
 </details><p>&nbsp;</p>
 
@@ -214,7 +211,7 @@ sed -i '1~4s/\s\+/_original /' 16S_trim_original.fastq
 ```
 
 ```
-#18S:
+# 18S:
 sed -i '1~4s/\s\+/_18S_trim_100bp.fastq /' 18S_trim_100bp.fastq
 sed -i '1~4s/\s\+/_18S_trim_200bp.fastq /' 18S_trim_200bp.fastq
 sed -i '1~4s/\s\+/_18S_trim_300bp.fastq /' 18S_trim_300bp.fastq
