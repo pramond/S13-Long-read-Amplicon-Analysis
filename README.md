@@ -75,7 +75,6 @@ grep ">" longread_wk2/16S_sub_V4_806R.fasta | sed 's/>//' | sed 's/\s.*$//' > lo
 grep ">" longread_wk2/16S_sub_V4_926R.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/16S_926R_reads_ID.txt</code></pre>
 </details>
 <p></p>
-
 We'll then extract the long reads that came through the **cutadapt** pipeline based on the list of reads with **seqkit**'s *grep* function:
 
 ```
