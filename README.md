@@ -103,7 +103,6 @@ First, make a directory for the sub-region fragments and copy all the trimmed se
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
 <pre><code>mkdir sub_regions</pre></code>
-
 <pre><code>cp 16S_og_reads_806R_trimm.fastq sub_regions
 cp 16S_og_reads_926R_trimm.fastq sub_regions
 cp 16S_sub_V4_806R.fasta sub_regions
