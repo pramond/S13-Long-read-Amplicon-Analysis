@@ -1,4 +1,3 @@
-### S13 Long-read Genomics, Metagenomics and Amplicon Analysis
 ### Tutorial/Practical
 
 ##### *Pierre Ramond, Swan LS Sow*
