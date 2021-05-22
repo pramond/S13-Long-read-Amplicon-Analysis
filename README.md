@@ -261,4 +261,4 @@ We'll now graphically compare the effects of long versus short amplicons of the 
 /export/lv4/projects/workshop_2021/S13_LongRead/scripts/LONGREAD_BIOINFO_WK2.R
 ```
 
-To launch R studio in ADA: http://ada.nioz.nl:8787/ and login with your credentials.
+To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
