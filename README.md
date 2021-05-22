@@ -69,7 +69,7 @@ Now, let's make a list of the reads that matched the adapter(primer) sequences f
 
 <details>
 <summary>
-<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show me the code!</a>    
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
 
 
@@ -105,7 +105,7 @@ First, make a directory for the sub-region fragments and copy all the trimmed se
 
 <details>
 <summary>
-<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show me the code!</a>    
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
 
 
@@ -158,7 +158,7 @@ To further test the theory, we'll generate sequence fragments from the original 
 
 <details>
 <summary>
-<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show me the code!</a>    
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
 
 ```
