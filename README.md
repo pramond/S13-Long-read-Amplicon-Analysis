@@ -72,11 +72,13 @@ Now, let's make a list of the reads that matched the adapter(primer) sequences f
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show me the code!</a>    
 </summary>
 
+
 ```
 grep ">" longread_wk2/18S_sub_V4_STOECK.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/18S_reads_ID.txt
 grep ">" longread_wk2/16S_sub_V4_806R.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/16S_806R_reads_ID.txt
 grep ">" longread_wk2/16S_sub_V4_926R.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/16S_926R_reads_ID.txt
 ```
+
 
 </details><p>&nbsp;</p>
 
@@ -106,6 +108,7 @@ First, make a directory for the sub-region fragments and copy all the trimmed se
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show me the code!</a>    
 </summary>
 
+
 ```
 mkdir sub_regions
 
@@ -116,6 +119,7 @@ cp 16S_sub_V4_926R.fasta sub_regions
 cp 18S_og_reads_trimm.fastq sub_regions
 cp 18S_sub_V4_STOECK.fasta sub_regions
 ```
+
 </details><p>&nbsp;</p>
 
 We'll use **MOTHUR** to classify our sequences with the silva.nr_v138 database for the 16S sequences and pr2_version_4.13.0_18S for the 18S sequences. MOTHUR works better with sequences in the fasta format, so we'll first convert all fastq sequences to fasta format with **seqtk**:
