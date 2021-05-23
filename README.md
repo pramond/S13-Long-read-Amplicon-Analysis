@@ -6,7 +6,7 @@
 ---
 
 ### 0. Background
-Besides the ease, simplicity, speed and relatively lower cost of long-reads generated from 3rd generation sequencing tech, one of the key advantages of longer amplicons lies in its potential of increased taxonomic resolution that cannot be achieved by targeted 16S sub-region sequencing used in short-read sequencing platforms (Johnson et.al. 2019). Longer reads also allow significant improvements of genome assemblies (Koren and Phillippy, 2015).
+Besides the ease, simplicity, speed and relatively lower cost of long-reads generated from 3rd generation sequencing tech, one of the key advantages of longer amplicons lies in its potential of increased taxonomic resolution that cannot be achieved by targeted 16S sub-region sequencing used in short-read sequencing platforms<sup>1</sup>. Longer reads also allow significant improvements of genome assemblies<sup>2</sup>.
 
 The primary aim of this tutorial is to illustrate the benefits of longer amplicons by comparing the quality of taxonomic assignments of long versus short amplicons of the same sequences.
 
@@ -17,7 +17,7 @@ We will work with long-read 16S and 18S amplicon dataset generated from samples 
 
 ![WS_SO_Together](https://user-images.githubusercontent.com/25445935/119269708-5a3b0400-bbf9-11eb-8827-19c438bab66c.png)
 
-16S amplicons were generated with the primer set A519F-1492R-pB-3771<sup>1</sup>, while the 18S amplicons were generated with the primer set Euk528F-U1391R<sup>2</sup>.
+16S amplicons were generated with the primer set A519F-1492R-pB-3771<sup>3</sup>, while the 18S amplicons were generated with the primer set Euk528F-U1391R<sup>4</sup>.
 
 First let's get some data into the project folder. Login to ADA, and *cd* to the following directory where all files required for this tutorial are located:
 
@@ -34,7 +34,7 @@ ln -s /export/lv4/projects/workshop_2021/S13_LongRead/reads/ /export/lv3/scratch
 <p>&nbsp;</p>
 
 ### 2. Extracting specific sub-regions of the 16S & 18S rRNA gene
-The original reads generated from the MinION sequencing are ~1100 bp for the 16S amplicons and ~1200 bp for the 18S amplicons. We will use **cutadapt** to trim the sequences to the desired fragment lengths and extract specific 16S and 18S rRNA gene sub-regions. For example, to extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in **cutadapt** as follows:
+The original reads generated from the MinION sequencing are ~1100 bp for the 16S amplicons and ~1200 bp for the 18S amplicons. We will use *cutadapt* to trim the sequences to the desired fragment lengths and extract specific 16S and 18S rRNA gene sub-regions. For example, to extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
 
 ```
 cutadapt -j 0 -e 0.3 -O 12 \
@@ -58,7 +58,7 @@ cutadapt -j 0 -e 0.3 -O 12 \
 16S.fastq
 ```
 
-Or alternatively, with the 515F-926R primer pair (Parada et.al., 2015), which targets the V4-5 region:
+Or alternatively, with the 515F-926R primer pair<sup>7</sup>, which targets the V4-5 region:
 
 ```
 cutadapt -j 0 -e 0.3 -O 12 \
@@ -83,7 +83,7 @@ grep ">" longread_wk2/16S_sub_V4_926R.fasta | sed 's/>//' | sed 's/\s.*$//' > lo
 
 <p>&nbsp;</p>
 
-We'll then extract the long reads that came through the **cutadapt** pipeline based on the list of reads with **seqkit**'s *grep* function:
+We'll then extract the long reads that came through the *cutadapt* pipeline based on the list of reads with *seqkit*'s *grep* function:
 
 ```
 seqkit grep -f longread_wk2/18S_reads_ID.txt 18S.fastq -o longread_wk2/18S_og_reads.fastq
@@ -91,7 +91,7 @@ seqkit grep -f longread_wk2/16S_806R_reads_ID.txt 16S.fastq -o longread_wk2/16S_
 seqkit grep -f longread_wk2/16S_926R_reads_ID.txt 16S.fastq -o longread_wk2/16S_og_reads_926R.fastq
 ```
 
-Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the long reads by trimming the first and last 80 bp of each sequence with **seqkit**'s *subseq* function:
+Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function:
 
 ```
 seqkit subseq -r 80:-80  18S_og_reads.fastq > 18S_og_reads_trimm.fastq
@@ -120,7 +120,7 @@ cp 18S_sub_V4_STOECK.fasta sub_regions</code></pre>
 
 <p>&nbsp;</p>
 
-We'll use **MOTHUR** to classify our sequences with the silva.nr_v138 database for the 16S sequences and pr2_version_4.13.0_18S for the 18S sequences. MOTHUR works better with sequences in the fasta format, so we'll first convert all fastq sequences to fasta format with **seqtk**:
+We'll use *MOTHUR* to classify our sequences with the silva.nr_v138 database for the 16S sequences and pr2_version_4.13.0_18S for the 18S sequences. MOTHUR works better with sequences in the fasta format, so we'll first convert all fastq sequences to fasta format with *seqtk*:
 
 ```
 cd sub_regions
@@ -130,7 +130,7 @@ seqtk seq -A 16S_og_reads_806R_trimm.fastq > `ls 16S_og_reads_806R_trimm.fastq |
 seqtk seq -A 18S_og_reads_trimm.fastq > `ls 18S_og_reads_trimm.fastq | sed 's/\.fastq/\.fasta/'`
 ```
 
-Classify the sequences with **MOTHUR** using the default *wang* method (Wang et.al., 2007). This should take ~ 5-10 minutes. The cutoff value indicates that only classified sequences with bootstrap values >= 80% will be returned.
+Classify the sequences with *MOTHUR* using the default *wang* method<sup>8</sup>. This should take ~ 5-10 minutes. The cutoff value indicates that only classified sequences with bootstrap values >= 80% will be returned.
 
 ```
 # 16S
@@ -168,7 +168,7 @@ cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</c
 
 <p>&nbsp;</p>
 
-Then use **cutadapt** to trim the fragment to different lengths:
+Then use *cutadapt* to trim the fragment to different lengths:
 
 ```
 # 16S
@@ -274,6 +274,18 @@ To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
 ---
 <sup>Refs:</sup>
 
-<sup>1. Martijn, J., Lind, A.E., Schon, M.E., Spiertz, I., Juzokaite, L., Bunikis, I., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.
+<sup>1. Johnson, J.S., Spakowicz, D.J., Hong, BY. et al. Evaluation of 16S rRNA gene sequencing for species and strain-level microbiome analysis. Nat Commun 10, 5029 (2019). https://doi.org/10.1038/s41467-019-13036-1</sup?>
 
-<sup>2. Edgcomb, V., Orsi, W., Bunge, J. et al. Protistan microbial observatory in the Cariaco Basin, Caribbean. I. Pyrosequencing vs Sanger insights into species richness. ISME J 5, 1344–1356 (2011). https://doi.org/10.1038/ismej.2011.6</sup>
+<sup>2. Koren, S., and Phillippy, A.M. (2015). One chromosome, one contig: complete microbial genomes from long-read sequencing and assembly. Current Opinion in Microbiology 23, 110-120.</sup>
+
+<sup>3. Martijn, J., Lind, A.E., Schon, M.E., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.
+
+<sup>4. Edgcomb, V., Orsi, W., Bunge, J., et al. (2011) Protistan microbial observatory in the Cariaco Basin, Caribbean. I. Pyrosequencing vs Sanger insights into species richness. ISME J 5, 1344–1356. https://doi.org/10.1038/ismej.2011.6</sup>
+
+<sup>5. Stoeck, T., Bass, D., Nebel, M., et al. (2010), Multiple marker parallel tag environmental DNA sequencing reveals a highly complex eukaryotic community in marine anoxic water. Molecular Ecology, 19: 21-31. https://doi.org/10.1111/j.1365-294X.2009.04480.x </sup>
+
+<sup>6. Caporaso, J.G., Lauber, C.L., Walters, W.A., et al. (2011). Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample. Proceedings of the National Academy of Sciences 108, 4516.</sup>
+
+<sup>7. Parada, A.E., Needham, D.M. and Fuhrman, J.A. (2016), Primers for marine microbiome studies. Environ Microbiol, 18: 1403-1414. https://doi.org/10.1111/1462-2920.13023</sup>
+
+<sup>8. Wang, Q., Garrity, G.M., Tiedje, J.M., et al. (2007). Naïve Bayesian Classifier for Rapid Assignment of rRNA Sequences into the New Bacterial Taxonomy. Applied and Environmental Microbiology 73, 5261-5267.</sup>
