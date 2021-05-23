@@ -16,7 +16,7 @@ We will work with long-read 16S and 18S amplicon dataset generated from samples 
 
 ![WS_SO_Together](https://user-images.githubusercontent.com/25445935/119269708-5a3b0400-bbf9-11eb-8827-19c438bab66c.png)
 
-16S amplicons were generated with the primer set A519F-1492R-pB-3771<sup>1</sup> (Martijn et.al., 2019), while the 18S amplicons were generated with the primer set Euk528F-U1391R<sup>2</sup> (Edgcomb et.al. 2011).
+16S amplicons were generated with the primer set A519F-1492R-pB-3771<sup>1</sup>, while the 18S amplicons were generated with the primer set Euk528F-U1391R<sup>2</sup>.
 
 First let's get some data into the project folder. Login to ADA, and *cd* to the following directory where all files required for this tutorial are located:
 
@@ -268,7 +268,8 @@ We'll now graphically compare the effects of long versus short amplicons of the 
 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
 
-<sup>
-Refs:
-1. Martijn, J., Lind, A.E., Schon, M.E., Spiertz, I., Juzokaite, L., Bunikis, I., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.
-</sup>
+<sup>Refs:</sup>
+
+<sup>1. Martijn, J., Lind, A.E., Schon, M.E., Spiertz, I., Juzokaite, L., Bunikis, I., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.</sup>
+
+<sup>2. Edgcomb, V., Orsi, W., Bunge, J. et al. Protistan microbial observatory in the Cariaco Basin, Caribbean. I. Pyrosequencing vs Sanger insights into species richness. ISME J 5, 1344–1356 (2011). https://doi.org/10.1038/ismej.2011.6</sup>
