@@ -25,11 +25,14 @@ First let's get some data into the project folder. Login to ADA, and *cd* to the
 cd /export/lv4/projects/workshop_2021/S13_LongRead/
 ```
 
-To be efficient with disk space, please make links from the sequence data fasta files to your working folders instead of copying them over.
+To be efficient with disk space, please make links from the sequence data fasta files to your working folders instead of copying them over. You are encouraged to figure out how to do this based on unix commands covered in the previous workshop sessions, but for simplicity we have also provided the code below.
 
-```
-ln -s /export/lv4/projects/workshop_2021/S13_LongRead/reads/ /export/lv3/scratch/workshop_2021/Users/<your_username>
-```
+<details>
+<summary>
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
+</summary>
+<pre><code>ln -s /export/lv4/projects/workshop_2021/S13_LongRead/reads/ /export/lv3/scratch/workshop_2021/Users/<your_username></code></pre>
+</details>
 
 <p>&nbsp;</p>
 
@@ -58,7 +61,7 @@ cutadapt -j 0 -e 0.3 -O 12 \
 16S.fastq
 ```
 
-Or alternatively, with the 515F-926R primer pair<sup>7</sup>, which targets the V4-5 region:
+Or alternatively, with the 515F-926R primer pair<sup>7</sup>, which targets the V4-V5 region:
 
 ```
 cutadapt -j 0 -e 0.3 -O 12 \
@@ -70,7 +73,7 @@ cutadapt -j 0 -e 0.3 -O 12 \
 16S.fastq
 ```
 
-Now, let's make a list of the reads that matched the adapter(primer) sequences from the *cutadapt* step above. You are encouraged to figure out how to do this based on unix commands covered in the previous workshop sessions, but for simplicity we have also provided the code below:
+Now, let's make a list of the reads that matched the adapter(primer) sequences from the *cutadapt* step above.
 
 <details>
 <summary>
