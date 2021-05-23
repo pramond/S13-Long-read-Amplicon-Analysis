@@ -268,7 +268,9 @@ We'll now graphically compare the effects of long versus short amplicons of the 
 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
 
+---
 <sup>Refs:</sup>
 
-<sup>1. Martijn, J., Lind, A.E., Schon, M.E., Spiertz, I., Juzokaite, L., Bunikis, I., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.<p>&nbsp;</p>
-2. Edgcomb, V., Orsi, W., Bunge, J. et al. Protistan microbial observatory in the Cariaco Basin, Caribbean. I. Pyrosequencing vs Sanger insights into species richness. ISME J 5, 1344–1356 (2011). https://doi.org/10.1038/ismej.2011.6</sup>
+<sup>1. Martijn, J., Lind, A.E., Schon, M.E., Spiertz, I., Juzokaite, L., Bunikis, I., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.
+
+<sup>2. Edgcomb, V., Orsi, W., Bunge, J. et al. Protistan microbial observatory in the Cariaco Basin, Caribbean. I. Pyrosequencing vs Sanger insights into species richness. ISME J 5, 1344–1356 (2011). https://doi.org/10.1038/ismej.2011.6</sup>
