@@ -275,7 +275,7 @@ We'll now graphically compare the effects of long versus short amplicons of the 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
 
 ---
-<sup>Refs:</sup>
+###### Refs:
 
 <sup>1. Johnson, J.S., Spakowicz, D.J., Hong, BY. et al. Evaluation of 16S rRNA gene sequencing for species and strain-level microbiome analysis. Nat Commun 10, 5029 (2019). https://doi.org/10.1038/s41467-019-13036-1</sup>
 
