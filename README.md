@@ -12,7 +12,11 @@ The primary aim of this tutorial is to illustrate the benefits of longer amplico
 <p>&nbsp;</p>
 
 ### 1. Dataset
-We will work with long-read 16S and 18S amplicon dataset generated from samples taken from the Wadden Sea and Southern Ocean in this practical session. 16S amplicons were generated with the primer set A519F-1492R-pB-3771 (Martijn et.al., 2019), while the 18S amplicons were generated with the primer set Euk528F-U1391R (Edgcomb et.al. 2011).
+We will work with long-read 16S and 18S amplicon dataset generated from samples taken from the Wadden Sea and Southern Ocean in this practical session.
+
+![WS_SO_Together](https://user-images.githubusercontent.com/25445935/119269708-5a3b0400-bbf9-11eb-8827-19c438bab66c.png)
+
+16S amplicons were generated with the primer set A519F-1492R-pB-3771 (Martijn et.al., 2019), while the 18S amplicons were generated with the primer set Euk528F-U1391R (Edgcomb et.al. 2011).
 
 First let's get some data into the project folder. Login to ADA, and *cd* to the following directory where all files required for this tutorial are located:
 
@@ -263,3 +267,5 @@ We'll now graphically compare the effects of long versus short amplicons of the 
 ```
 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
+
+Further reading:
