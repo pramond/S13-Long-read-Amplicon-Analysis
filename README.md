@@ -268,4 +268,7 @@ We'll now graphically compare the effects of long versus short amplicons of the 
 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
 
+<sup>
 Refs:
+1. Martijn, J., Lind, A.E., Schon, M.E., Spiertz, I., Juzokaite, L., Bunikis, I., et al. (2019). Confident phylogenetic identification of uncultured prokaryotes through long read amplicon sequencing of the 16S-ITS-23S rRNA operon. Environ Microbiol 21, 2485-2498.
+</sup>
