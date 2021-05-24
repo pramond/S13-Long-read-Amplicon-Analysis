@@ -124,7 +124,7 @@ cp 18S_sub_V4_STOECK.fasta sub_regions</code></pre>
 
 <p>&nbsp;</p>
 
-We'll use *MOTHUR* to classify our sequences with the silva.nr_v138 database for the 16S sequences and pr2_version_4.13.0_18S for the 18S sequences. MOTHUR works better with sequences in the fasta format, so we'll first convert all fastq sequences to fasta format with *seqtk*:
+We'll use *MOTHUR* to classify our sequences with the silva.nr_v138 database for the 16S sequences and pr2_version_4.13.0_18S for the 18S sequences. *MOTHUR* works better with sequences in the fasta format, so we'll first convert all fastq sequences to fasta format with *seqtk*:
 
 ```
 cd sub_regions
@@ -134,7 +134,7 @@ seqtk seq -A 16S_og_reads_806R_trimm.fastq > `ls 16S_og_reads_806R_trimm.fastq |
 seqtk seq -A 18S_og_reads_trimm.fastq > `ls 18S_og_reads_trimm.fastq | sed 's/\.fastq/\.fasta/'`
 ```
 
-Classify the sequences with *MOTHUR* using the default *wang* method<sup>8</sup>. This should take ~ 5-10 minutes. The cutoff value indicates that only classified sequences with bootstrap values >= 80% will be returned.
+Classify the sequences with *MOTHUR* using the default *wang* method<sup>8</sup>. This should take ~ 5-10 minutes. The cutoff value indicates that only classified sequences with bootstrap values ≥80% will be returned.
 
 ```
 # 16S
