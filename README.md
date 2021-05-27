@@ -176,8 +176,7 @@ To further illustrate the better taxonomic annotation, we'll generate a size-gra
 <pre><code>cd /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/
 mkdir Length_gradients
 mkdir Length_gradients/18S
-mkdir Length_gradients/16S
-</details>
+mkdir Length_gradients/16S</details>
 
 We copy and rename the trimmed orginal reads (we use only the subset of reads that matched the 515F-806R primers for 16S)
 
@@ -186,8 +185,7 @@ We copy and rename the trimmed orginal reads (we use only the subset of reads th
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
 <pre><code>cp 18S_og_reads_trimm.fastq Length_gradients/18S/18S_trim_original.fastq
-cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</code></pre>
-</details>
+cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</code></pre></details>
 
 <p>&nbsp;</p>
 
