@@ -37,17 +37,19 @@ To be efficient with disk space, please make links from the sequence data fasta 
 
 <p>&nbsp;</p>
 
-**Programs/packages require for this tutorial:**
+**Programs/packages required for this tutorial:**
 
 1. cutadapt v1.16
 2. seqkit v0.14.0
 3. MOTHUR v.1.40.4
+
 
 They should already installed on ADA, but if *seqkit* is not available to you, you can install it with:
 
 ```
 conda install -c bioconda seqkit
 ```
+<p>&nbsp;</p>
 
 ### 2. Extracting specific sub-regions of the 16S & 18S rRNA gene
 The original reads generated from the MinION sequencing are ~1100 bp for the 16S amplicons and ~1200 bp for the 18S amplicons. We will use *cutadapt* to trim the sequences to the desired fragment lengths and extract specific 16S and 18S rRNA gene sub-regions. For example, to extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
