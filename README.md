@@ -98,7 +98,7 @@ seqkit grep -f cutadapt_reads/16S_806R_reads_ID.txt 16S.fastq -o cutadapt_reads/
 seqkit grep -f cutadapt_reads/16S_926R_reads_ID.txt 16S.fastq -o cutadapt_reads/16S_og_reads_926R.fastq
 ```
 
-Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function:
+Finally, we remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the orignal long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function. Assigning taxonomy to reads with adapters or UMIs would probably lead to spurious taxonomic annotation.
 
 ```
 cd cutadapt_reads
@@ -110,7 +110,7 @@ seqkit subseq -r 80:-80  16S_og_reads_926R.fastq > 16S_og_reads_926R_trimm.fastq
 
 ### 3. Generating taxonomy of the V4 sub-region fragments
 
-First, make a directory for the sub-region fragments and copy all the trimmed sequence fragments to this folder
+First, make a directory for the files to annotate, i.e. the read files for the sub-regions (_sub_V4_) and the original trimmed reads (_og_*_trimm.fastq)
 
 <details>
 <summary>
