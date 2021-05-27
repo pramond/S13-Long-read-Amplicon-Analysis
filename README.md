@@ -253,7 +253,7 @@ sed -i '1~4s/\s\+/_18S_trim_1000bp.fastq /' 18S_trim_1000bp.fastq
 sed -i '1~4s/\s\+/_original /' 18S_trim_original.fastq
 ```
 
-Again, we'll need to convert all the the fastq files to fasta before the taxonomic annotation step. We'll use a loop to repeat the conversion for all the fastq files in the folder. (change *username*).
+Again, we'll need to convert all the the fastq files to fasta before the taxonomic annotation step. We'll use a loop to repeat the conversion for all the fastq files in the folder. (don't get on my nerves, change *username*).
 
 ```
 for i in /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/Length_gradients/*/*fastq;
@@ -265,7 +265,7 @@ done
 Finally, let's assign taxonomy for all sequences of the different length gradients:
 
 ```
-# Assign taxonomy for all fasta files 16S folder (I swear to god change *username* or I will track you, find you and kill you)
+# Assign taxonomy for all fasta files 16S folder (I swear to god, change *username* or I will track you, find you and kill you)
 
 for i in /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/Length_gradients/16S/*.fasta;
 do
@@ -289,7 +289,7 @@ done
 We'll now graphically compare the effects of long versus short amplicons of the same sequences on the quality of taxonomic assignments. We'll do this in R studio, with an R script that can be found in:
 
 ```
-/export/lv3/scratch/workshop_2021/Users/pramond/S13_LongRead/scripts
+/export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/scripts
 ```
 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
