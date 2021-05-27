@@ -6,14 +6,14 @@
 ---
 
 ### 0. Background
-Besides the ease, simplicity, speed and relatively lower cost of long-reads generated from 3rd generation sequencing tech, one of the key advantages of longer amplicons lies in its potential of increased taxonomic resolution that cannot be achieved by targeted 16S sub-region sequencing used in short-read sequencing platforms<sup>1</sup>. Longer reads also allow significant improvements of genome assemblies<sup>2</sup>.
+Besides the ease, simplicity, speed and relatively lower cost of long-reads generated from third generation sequencing tech, one of the key advantages of longer amplicons lies in its potential of increased taxonomic resolution that cannot be achieved by targeted 16S/18S rRNA gene sub-region sequencing used in short-read sequencing platforms<sup>1</sup>. Longer reads also allow for significant improvements of genome assemblies<sup>2</sup>.
 
 The primary aim of this tutorial is to illustrate the benefits of longer amplicons by comparing the quality of taxonomic assignments of long versus short amplicons of the same sequences.
 
 <p>&nbsp;</p>
 
 ### 1. Dataset
-We will work with long-read 16S and 18S amplicon dataset generated from samples taken from the Wadden Sea and Southern Ocean in this practical session.
+We will work with long-read 16S and 18S rRNA gene amplicon datasets generated from samples taken from the Wadden Sea and Southern Ocean in this practical session.
 
 ![WS_SO_Together](https://user-images.githubusercontent.com/25445935/119269708-5a3b0400-bbf9-11eb-8827-19c438bab66c.png)
 
@@ -36,6 +36,18 @@ To be efficient with disk space, please make links from the sequence data fasta 
 
 
 <p>&nbsp;</p>
+
+**Programs/packages require for this tutorial:**
+
+1. cutadapt v1.16
+2. seqkit v0.14.0
+3. MOTHUR v.1.40.4
+
+They should already installed on ADA, but if *seqkit* is not available to you, you can install it with:
+
+```
+conda install -c bioconda seqkit
+```
 
 ### 2. Extracting specific sub-regions of the 16S & 18S rRNA gene
 The original reads generated from the MinION sequencing are ~1100 bp for the 16S amplicons and ~1200 bp for the 18S amplicons. We will use *cutadapt* to trim the sequences to the desired fragment lengths and extract specific 16S and 18S rRNA gene sub-regions. For example, to extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
