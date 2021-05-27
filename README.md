@@ -83,9 +83,9 @@ Now, let's make a list of the reads that matched the adapter(primer) sequences f
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
-<pre><code>grep ">" longread_wk2/18S_sub_V4_STOECK.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/18S_reads_ID.txt
-grep ">" longread_wk2/16S_sub_V4_806R.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/16S_806R_reads_ID.txt
-grep ">" longread_wk2/16S_sub_V4_926R.fasta | sed 's/>//' | sed 's/\s.*$//' > longread_wk2/16S_926R_reads_ID.txt</code></pre>
+<pre><code>grep ">" cutadapt_reads/18S_sub_V4_STOECK.fasta | sed 's/>//' | sed 's/\s.*$//' > cutadapt_reads/18S_reads_ID.txt
+grep ">" cutadapt_reads/16S_sub_V4_806R.fasta | sed 's/>//' | sed 's/\s.*$//' > cutadapt_reads/16S_806R_reads_ID.txt
+grep ">" cutadapt_reads/16S_sub_V4_926R.fasta | sed 's/>//' | sed 's/\s.*$//' > cutadapt_reads/16S_926R_reads_ID.txt</code></pre>
 </details>
 
 <p>&nbsp;</p>
@@ -93,9 +93,9 @@ grep ">" longread_wk2/16S_sub_V4_926R.fasta | sed 's/>//' | sed 's/\s.*$//' > lo
 We'll then extract the long reads that came through the *cutadapt* pipeline based on the list of reads with *seqkit*'s *grep* function:
 
 ```
-seqkit grep -f longread_wk2/18S_reads_ID.txt 18S.fastq -o longread_wk2/18S_og_reads.fastq
-seqkit grep -f longread_wk2/16S_806R_reads_ID.txt 16S.fastq -o longread_wk2/16S_og_reads_806R.fastq
-seqkit grep -f longread_wk2/16S_926R_reads_ID.txt 16S.fastq -o longread_wk2/16S_og_reads_926R.fastq
+seqkit grep -f cutadapt_reads/18S_reads_ID.txt 18S.fastq -o cutadapt_reads/18S_og_reads.fastq
+seqkit grep -f cutadapt_reads/16S_806R_reads_ID.txt 16S.fastq -o cutadapt_reads/16S_og_reads_806R.fastq
+seqkit grep -f cutadapt_reads/16S_926R_reads_ID.txt 16S.fastq -o cutadapt_reads/16S_og_reads_926R.fastq
 ```
 
 Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function:
