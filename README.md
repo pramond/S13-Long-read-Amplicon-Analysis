@@ -147,6 +147,7 @@ Classify the sequences with *MOTHUR* using the default *wang* method<sup>8</sup>
 # the file to classify: our fasta files
 # the cutoff for bootstrap values ≥80%: taxonomic levels under this thresholds are considered unclassified for all reads (you wonder what is a bootstrap value really? https://www.researchgate.net/post/What-is-a-bootstrap-value#58ef7ba6b0366d8cd460abfe).
 
+# dont' forget to change *username* with your username
 
 mothur "#set.dir(input=/export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_BINNING/longread_wk/databases/);classify.seqs(fasta=/export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/sub_regions/16S_og_reads_806R_trimm.fasta, reference=silva.nr_v138_1.align, taxonomy=silva.nr_v138_1.tax, cutoff=80)"
 
