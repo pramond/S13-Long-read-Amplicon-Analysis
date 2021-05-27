@@ -43,8 +43,7 @@ To be efficient with disk space, please make links from the sequence data fasta 
 2. seqkit v0.14.0
 3. MOTHUR v.1.40.4
 
-
-They should already installed on ADA, but if *seqkit* is not available to you, you can install it with:
+The programs should already installed on ADA, but if *seqkit* is not available to you, you can install it with:
 
 ```
 conda install -c bioconda seqkit
