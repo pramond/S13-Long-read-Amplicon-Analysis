@@ -25,7 +25,7 @@ First let's get some data into the project folder. Login to ADA, and *cd* to the
 cd /export/lv4/projects/workshop_2021/S13_LongRead/
 ```
 
-To be efficient with disk space, please make links from the sequence data fasta files to your working folders instead of copying them over. You are encouraged to figure out how to do this based on unix commands covered in the previous workshop sessions, but for simplicity we have also provided the code below.
+Please copy the sequence data fastq files to your working folders. You are encouraged to figure out how to do this based on unix commands covered in the previous workshop sessions, but for simplicity we have also provided the code below. Then change to your directory.
 
 <details>
 <summary>
