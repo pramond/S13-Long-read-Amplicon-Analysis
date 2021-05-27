@@ -179,9 +179,13 @@ mkdir Length_gradients/18S
 mkdir Length_gradients/16S
 </details>
 
-#we copy and rename the trimmed orginal reads (we use only the subset of reads that matched the 515F-806R primers for 16S)
-</details>
-cp 18S_og_reads_trimm.fastq Length_gradients/18S/18S_trim_original.fastq
+We copy and rename the trimmed orginal reads (we use only the subset of reads that matched the 515F-806R primers for 16S)
+
+<details>
+<summary>
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
+</summary>
+<pre><code>cp 18S_og_reads_trimm.fastq Length_gradients/18S/18S_trim_original.fastq
 cp 16S_og_reads_806R_trimm.fastq Length_gradients/16S/16S_trim_original.fastq</code></pre>
 </details>
 
