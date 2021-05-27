@@ -167,7 +167,7 @@ mothur "#set.dir(input=/export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_B
 
 ### 4. Generating length gradient fragments from the trimmed long reads
 
-To further test the theory, we'll generate sequence fragments from the original long reads with 100bp length variations. Make a new folder for the length gradient fragments, and then subfolders within that folder for the 16S and 18S fragments. Make a copy of the fastq file containing the trimmed long reads.
+To further illustrate the better taxonomic annotation, we'll generate a size-gradient of the sequence fragments from the original long reads by 100bp (i.e. 100bp, 200bp, 300bp... 1000bp, original). Make a new folder for the length gradient fragments, and then subfolders within that folder for the 16S and 18S fragments. Make a copy of the fastq file containing the trimmed long reads.
 
 <details>
 <summary>
