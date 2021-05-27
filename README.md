@@ -193,6 +193,7 @@ Then use *cutadapt* to trim the fragment to different lengths:
 
 ```
 # 16S
+cd Length_gradients/16S/
 cutadapt -l 100 -o 16S_trim_100bp.fastq 16S_trim_original.fastq
 cutadapt -l 200 -o 16S_trim_200bp.fastq 16S_trim_original.fastq
 cutadapt -l 300 -o 16S_trim_300bp.fastq 16S_trim_original.fastq
@@ -207,6 +208,7 @@ cutadapt -l 1000 -o 16S_trim_1000bp.fastq 16S_trim_original.fastq
 
 ```
 # 18S
+cd Length_gradients/18S/
 cutadapt -l 100 -o 18S_trim_100bp.fastq 18S_trim_original.fastq
 cutadapt -l 200 -o 18S_trim_200bp.fastq 18S_trim_original.fastq
 cutadapt -l 300 -o 18S_trim_300bp.fastq 18S_trim_original.fastq
