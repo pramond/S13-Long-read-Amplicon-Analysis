@@ -173,7 +173,8 @@ To further illustrate the better taxonomic annotation, we'll generate a size-gra
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
-<pre><code>mkdir Length_gradients
+<pre><code> cd /export/lv3/scratch/workshop_2021/Users/pramond/S13_LongRead/reads/cutadapt_reads/
+mkdir Length_gradients
 mkdir Length_gradients/18S
 mkdir Length_gradients/16S
 
