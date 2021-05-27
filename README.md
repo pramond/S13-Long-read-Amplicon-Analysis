@@ -59,7 +59,7 @@ cutadapt -j 0 -e 0.3 -O 12 \ # parameters on the errors tolerated to recognize t
   -o cutadapt_reads/18S_sub_V4_STOECK.fasta \ # output directory
 18S.fastq # file to work on
 
-cutadapt -j 0 -e 0.3 -O 12 
+cutadapt -j 0 -e 0.3 -O 12 \
   --discard-untrimmed \ 
   -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \ 
   -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG \ 
