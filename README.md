@@ -51,6 +51,7 @@ mkdir cutadapt_reads
 To extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
 
 ```
+# commented script, will not work
 cutadapt -j 0 -e 0.3 -O 12 \ # parameters on the errors tolerated to recognize the primers
   --discard-untrimmed \ # we want only the reads that were cut
   -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \ # sequence 3-5' of forward primer ... reverse complement of the sequence 3-5' of reverse primer
@@ -59,38 +60,21 @@ cutadapt -j 0 -e 0.3 -O 12 \ # parameters on the errors tolerated to recognize t
   -o cutadapt_reads/18S_sub_V4_STOECK.fasta \ # output directory
 18S.fastq # file to work on
 
-cutadapt -j 0 -e 0.3 -O 12 \
-  --discard-untrimmed \ 
-  -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \ 
-  -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG \ 
-  -M 600 \ 
-  -o cutadapt_reads/18S_sub_V4_STOECK.fasta \ 
-18S.fastq
+
+cutadapt -j 0 -e 0.3 -O 12 --discard-untrimmed -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG -M 600 -o cutadapt_reads/18S_sub_V4_STOECK.fasta 18S.fastq
 
 ```
 
 The 16S V4 region can be extracted by using the 515F-806R primer sequences developed by Caporaso et.al. (2011):
 
 ```
-cutadapt -j 0 -e 0.3 -O 12 \
-  --discard-untrimmed \
-  -a GTGCCAGCMGCCGCGGTAA...ATTAGAWADDDBDGTAGTCC \
-  -a GGACTACHVHHHTWTCTAAT...TTACCGCGGCKGCTGGCAC \
-  -M 600 \
-  -o cutadapt_reads/16S_sub_V4_806R.fasta \
-16S.fastq
+cutadapt -j 0 -e 0.3 -O 12 --discard-untrimmed -a GTGCCAGCMGCCGCGGTAA...ATTAGAWADDDBDGTAGTCC -a GGACTACHVHHHTWTCTAAT...TTACCGCGGCKGCTGGCAC -M 600 -o cutadapt_reads/16S_sub_V4_806R.fasta 16S.fastq
 ```
 
 Or alternatively, with the 515F-926R primer pair<sup>7</sup>, which targets the V4-V5 region:
 
 ```
-cutadapt -j 0 -e 0.3 -O 12 \
-  --discard-untrimmed \
-  -a GTGYCAGCMGCCGCGGTAA...AAACTYAAAKRAATTGRCGG \
-  -a CCGYCAATTYMTTTRAGTTT...TTACCGCGGCKGCTGRCAC \
-  -M 600 \
-  -o cutadapt_reads/16S_sub_V4_926R.fasta \
-16S.fastq
+cutadapt -j 0 -e 0.3 -O 12 --discard-untrimmed -a GTGYCAGCMGCCGCGGTAA...AAACTYAAAKRAATTGRCGG -a CCGYCAATTYMTTTRAGTTT...TTACCGCGGCKGCTGRCAC -M 600 -o cutadapt_reads/16S_sub_V4_926R.fasta 16S.fastq
 ```
 
 Now, let's make a list of the reads that matched the adapter(primer) sequences from the *cutadapt* step above.
