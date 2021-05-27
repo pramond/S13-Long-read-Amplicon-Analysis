@@ -101,6 +101,7 @@ seqkit grep -f cutadapt_reads/16S_926R_reads_ID.txt 16S.fastq -o cutadapt_reads/
 Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function:
 
 ```
+cd cutadapt_reads
 seqkit subseq -r 80:-80  18S_og_reads.fastq > 18S_og_reads_trimm.fastq
 seqkit subseq -r 80:-80  16S_og_reads_806R.fastq > 16S_og_reads_806R_trimm.fastq
 seqkit subseq -r 80:-80  16S_og_reads_926R.fastq > 16S_og_reads_926R_trimm.fastq
