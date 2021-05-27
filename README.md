@@ -253,10 +253,10 @@ sed -i '1~4s/\s\+/_18S_trim_1000bp.fastq /' 18S_trim_1000bp.fastq
 sed -i '1~4s/\s\+/_original /' 18S_trim_original.fastq
 ```
 
-Again, we'll need to convert all the the fastq files to fasta before the taxonomic annotation step. We'll use a loop to repeat the conversion for all the fastq files in the folder.
+Again, we'll need to convert all the the fastq files to fasta before the taxonomic annotation step. We'll use a loop to repeat the conversion for all the fastq files in the folder. (change *username*).
 
 ```
-for i in /export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_BINNING/longread_wk2/Length_gradients/*/*fastq;
+for i in /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/Length_gradients/*/*fastq;
 do
 seqtk seq -A $i > `ls $i | sed 's/\.fastq/\.fasta/'`;
 done
@@ -265,18 +265,18 @@ done
 Finally, let's assign taxonomy for all sequences of the different length gradients:
 
 ```
-# Assign taxonomy for all fasta files 16S folder
+# Assign taxonomy for all fasta files 16S folder (I swear to god change *username* or I will track you, find you and kill you)
 
-for i in /export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_BINNING/longread_wk2/Length_gradients/16S/*.fasta;
+for i in /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/Length_gradients/16S/*.fasta;
 do
 mothur "#set.dir(input=/export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_BINNING/longread_wk/databases/);classify.seqs(fasta=$i, reference=silva.nr_v138_1.align, taxonomy=silva.nr_v138_1.tax, cutoff=80)"
 done
 ```
 
 ```
-# Assign taxonomy for all fasta files 18S folder
+# Assign taxonomy for all fasta files 18S folder (you knwo what to do by now... or you are dead)
 
-for i in /export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_BINNING/longread_wk2/Length_gradients/18S/*.fasta;
+for i in /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/Length_gradients/18S/*.fasta;
 do
 mothur "#set.dir(input=/export/lv4/projects/NIOZ200/Data/Analysis_Bonito/6_UMI_BINNING/longread_wk/databases/);classify.seqs(fasta=$i, reference=pr2_version_4.13.0_18S_mothur.fasta, taxonomy=pr2_version_4.13.0_18S_mothur.tax, cutoff=80)"
 done
@@ -289,7 +289,7 @@ done
 We'll now graphically compare the effects of long versus short amplicons of the same sequences on the quality of taxonomic assignments. We'll do this in R studio, with an R script that can be found in:
 
 ```
-/export/lv4/projects/workshop_2021/S13_LongRead/scripts/LONGREAD_BIOINFO_WK2.R
+/export/lv3/scratch/workshop_2021/Users/pramond/S13_LongRead/scripts
 ```
 
 To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
