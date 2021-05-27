@@ -31,7 +31,8 @@ To be efficient with disk space, please make links from the sequence data fasta 
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;View code</a>    
 </summary>
-<pre><code>ln -s /export/lv4/projects/workshop_2021/S13_LongRead/reads/ /export/lv3/scratch/workshop_2021/Users/your_username</code></pre>
+<pre><code>cp -r /export/lv4/projects/workshop_2021/S13_LongRead/ /export/lv3/scratch/workshop_2021/Users/your_username</code></pre>
+<pre><code>cd /export/lv3/scratch/workshop_2021/Users/your_username/S13_LongRead/</code></pre>
 </details>
 
 
