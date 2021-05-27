@@ -274,7 +274,7 @@ done
 ```
 
 ```
-# Assign taxonomy for all fasta files 18S folder (you knwo what to do by now... or you are dead)
+# Assign taxonomy for all fasta files 18S folder (you know what to do by now... or you are dead)
 
 for i in /export/lv3/scratch/workshop_2021/Users/*username*/S13_LongRead/reads/cutadapt_reads/Length_gradients/18S/*.fasta;
 do
