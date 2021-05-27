@@ -108,7 +108,7 @@ seqkit grep -f longread_wk2/16S_806R_reads_ID.txt 16S.fastq -o longread_wk2/16S_
 seqkit grep -f longread_wk2/16S_926R_reads_ID.txt 16S.fastq -o longread_wk2/16S_og_reads_926R.fastq
 ```
 
-Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs) from the long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function:
+Finally, we'll remove the adapters, primers and Unique Molecular Identifiers (UMIs)<sup>9</sup> from the long reads by trimming the first and last 80 bp of each sequence with *seqkit*'s 'subseq' function:
 
 ```
 seqkit subseq -r 80:-80  18S_og_reads.fastq > 18S_og_reads_trimm.fastq
@@ -306,3 +306,5 @@ To launch R studio in ADA: [http://ada.nioz.nl:8787/](http://ada.nioz.nl:8787/)
 <sup>7. Parada, A.E., Needham, D.M. and Fuhrman, J.A. (2016), Primers for marine microbiome studies. Environ Microbiol, 18: 1403-1414. https://doi.org/10.1111/1462-2920.13023</sup>
 
 <sup>8. Wang, Q., Garrity, G.M., Tiedje, J.M., et al. (2007). Naïve Bayesian Classifier for Rapid Assignment of rRNA Sequences into the New Bacterial Taxonomy. Applied and Environmental Microbiology 73, 5261-5267.</sup>
+
+<sup>9. Hiatt, J.B., Patwardhan, R.P., Turner, E.H., et.al. (2010). Parallel, tag-directed assembly of locally derived short sequence reads. Nat Methods 7, 119-122.</sup>
