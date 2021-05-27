@@ -39,7 +39,7 @@ Please copy the sequence data fastq files to your working folders. You are encou
 <p>&nbsp;</p>
 
 ### 2. Extracting specific sub-regions of the 16S & 18S rRNA gene
-The original reads generated from the MinION sequencing are ~1100 bp for the 16S amplicons and ~1200 bp for the 18S amplicons. We will use *cutadapt* to trim the sequences to the desired fragment lengths and extract specific 16S and 18S rRNA gene sub-regions. For example, to extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
+The original reads generated from the MinION sequencing are ~1100 bp for the 16S amplicons and ~1200 bp for the 18S amplicons. We will use *cutadapt* to trim the sequences to the desired fragment lengths and extract specific 16S and 18S rRNA gene sub-regions. 
 
 First let's create a directory for the output of *cutadapt*:
 
@@ -48,13 +48,14 @@ cd /export/lv3/scratch/workshop_2021/Users/pramond/S13_LongRead/reads
 mkdir cutadapt_reads
 ```
 
+To extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
 
 ```
 cutadapt -j 0 -e 0.3 -O 12 \
   --discard-untrimmed \
-  -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \
-  -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG \
-  -M 600 \
+  -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \ # sequence 3-5' of forward primer ... reverse complement of the sequence 3-5' of reverse primer
+  -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG \ # sequence 3-5' of reverse primer ... reverse complement of the sequence 3-5' of forward primer
+  -M 600 \ # to make sure we get the subregions targeted by the primers we add a read length selection
   -o cutadapt_reads/18S_sub_V4_STOECK.fasta \
 18S.fastq
 ```
