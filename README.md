@@ -51,13 +51,22 @@ mkdir cutadapt_reads
 To extract the 18S V4 region, we use the primer sequences that were developed by Stoeck et.al. (2010) as the adapter sequence parameter in *cutadapt* as follows:
 
 ```
-cutadapt -j 0 -e 0.3 -O 12 \
-  --discard-untrimmed \
+cutadapt -j 0 -e 0.3 -O 12 \ # parameters on the errors tolerated to recognize the primers
+  --discard-untrimmed \ # we want only the reads that were cut
   -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \ # sequence 3-5' of forward primer ... reverse complement of the sequence 3-5' of reverse primer
   -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG \ # sequence 3-5' of reverse primer ... reverse complement of the sequence 3-5' of forward primer
   -M 600 \ # to make sure we get the subregions targeted by the primers we add a read length selection
-  -o cutadapt_reads/18S_sub_V4_STOECK.fasta \
+  -o cutadapt_reads/18S_sub_V4_STOECK.fasta \ # output directory
+18S.fastq # file to work on
+
+cutadapt -j 0 -e 0.3 -O 12 
+  --discard-untrimmed \ 
+  -a CCAGCASCYGCGGTAATTCC...TYRATCAAGAACGAAAGT \ 
+  -a ACTTTCGTTCTTGATYRA...GGAATTACCGCRGSTGCTGG \ 
+  -M 600 \ 
+  -o cutadapt_reads/18S_sub_V4_STOECK.fasta \ 
 18S.fastq
+
 ```
 
 The 16S V4 region can be extracted by using the 515F-806R primer sequences developed by Caporaso et.al. (2011):
